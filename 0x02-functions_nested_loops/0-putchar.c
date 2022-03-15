@@ -1,21 +1,27 @@
+/*
+ * File: 0-putchar.c
+ * Auth: hamudi
+ *
+ */
+
 #include "_putchar.h"
 
 /**
- * main - program that prints Holberton.
+ * main - Prints "_putchar.h" followed by a new line.
  *
- * Return: int
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int n = 0;
-	char str_pcr[7] = "_putchar";
-
-	while (n < 7)
-	{
-		_putchar(str_pcr[n]);
-		n += 1;
-	}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
+
 	return (0);
 }
