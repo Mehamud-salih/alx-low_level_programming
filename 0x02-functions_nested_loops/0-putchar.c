@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main()
-       {
-      printf("_putchar");
 
-       return(0);
-
-        } 
+        {
+	int n = 0;
+	char str_putchar[]
+	}
