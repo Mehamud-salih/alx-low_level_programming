@@ -1,16 +1,15 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - prints buffer in hexa
- * @argc: he number of command line arguments
- * @argv: An array containing the program command line arguments.
+ * main - Prints the program name, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Return: Nothing.
+ * Return: Always o.
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	(void)argc;
 	printf("%s\n", argv[0]);
+
 	return (0);
 }
