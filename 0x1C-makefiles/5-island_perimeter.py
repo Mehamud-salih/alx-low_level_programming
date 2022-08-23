@@ -1,23 +1,35 @@
-able file 22 lines (19 sloc) 632 Bytes
 #!/usr/bin/python3
-"""5-island_perimeter module"""
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jul  3 09:29:55 2020
+
+@author: Robinson Montes
+"""
 
 
 def island_perimeter(grid):
-    """Returns the perimeter of the island described in grid"""
-    c = 0
-    length = len(grid) - 1
-    width = len(grid[0]) - 1
+    """
+    Calculater the Island's perimeter
 
-    for i, r in enumerate(grid):
-        for j, n in enumerate(r):
-            if n == 1:
-                if i == 0 or grid[i - 1][j] != 1:
-                    c += 1
-                if j == 0 or grid[i][j - 1] != 1:
-                    c += 1
-                if j == width or grid[i][j + 1] != 1:
-                    c += 1
-                if i == length or grid[i + 1][j] != 1:
-                    c += 1
-    return c
+    Parameter:
+        grid (array): An 0's and 1's array that represents an island (1)
+        sourrounded by water (0)
+
+    Returns:
+        The island's perimeter
+    """
+    rows = len(grid)
+    cols = len(grid[0])
+    perimeter = 0
+    for i in range(1, rows - 1):
+        for j in range(1, cols - 1):
+            if grid[i][j] == 1:
+                if grid[i - 1][j] == 0:
+                    perimeter += 1
+                if grid[i + 1][j] == 0:
+                    perimeter += 1
+                if grid[i][j - 1] == 0:
+                    perimeter += 1
+                if grid[i][j + 1] == 0:
+                    perimeter += 1
+    return perimeter
